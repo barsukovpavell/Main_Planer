@@ -9,10 +9,10 @@
         <link rel="stylesheet" href="styles.css">
 
         <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-                    rel="stylesheet"> -->
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link
+                            href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+                            rel="stylesheet"> -->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +55,7 @@
                     </form>
                 </div>
 
+                <!-- Начало бокового меню -->
                 <nav class="menu-column">
 
                     <div class="container-menu">
@@ -102,8 +103,8 @@
                             <div class="tab">
 
                                 <li><span class="themes">
-
-                                        <label for="add_file" class="new_label" title="go over" id="project"> <img
+                                    <!-- add_file -->
+                                        <label for="" class="new_label" title="go over" id="project"> <img
                                                 src="detailed_4411616.png" alt="Иконка документа" class="file_icon">
                                             <p> Проекты </p>
                                         </label>
@@ -128,7 +129,7 @@
 
 
                             <li><span class="themes">
-                                    <label for="add_file" class="new_label" title="go over"> <img src="dj-mixer_4132842.png"
+                                    <label for="" class="new_label" title="go over"> <img src="dj-mixer_4132842.png"
                                             alt="Иконка документа" class="file_icon">
                                         <p> Аналитика </p>
                                     </label>
@@ -136,7 +137,7 @@
                                 </span></li>
 
                             <li><span class="themes">
-                                    <label for="add_file" class="new_label" title="go over"> <img src="doctor_2008181.png"
+                                    <label for="" class="new_label" title="go over"> <img src="doctor_2008181.png"
                                             alt="Иконка документа" class="file_icon">
                                         <p> Проблемы </p>
                                     </label>
@@ -145,99 +146,227 @@
                         </ol>
 
                     </div>
+
+                    <!-- начало столбики с числами -->
+                    <div class="numbers">
+
+
+
+                    </div>
+
                 </nav>
             </aside>
 
 
             <!--шапка -->
-            <div class="top_1">
 
-                <div class="top">
+            <div class="top">
 
-                    <div class="colum-top">
-
-
-                        <div class="top-left">
+                <div class="colum-top">
 
 
-                            <button type="reset" class="back-button"> Назад </button>
-
-                            <span class="themes">
-                                <label for="add_file" class="new_label-themes" title=""> <img
-                                        src="projector_1202914.png" alt="Иконка документа" class="file_icon">
-                                    <p> Новые темы </p>
-                                </label>
-
-                                <input type="file" accept=".jpg,.png,.pdf" value="Отправить">
-
-                            </span>
+                    <div class="top-left">
 
 
-                            
-                            <span class="el-t"> / </span>
+                        <button type="reset" class="back-button"> Назад </button>
 
-                            <span class="value_status">
-                                <p>72</p>
-                            </span>
+                        <span class="themes">
+                            <label for="" class="new_label-themes" title=""> <img src="projector_1202914.png"
+                                    alt="Иконка документа" class="file_icon">
+                                <p> Новые темы </p>
+                            </label>
 
-                            <span class="status"> Активны </span>
+                            <input type="file" accept=".jpg,.png,.pdf" value="Отправить">
 
-                            <span class="status-double"> 2/12 </span>
+                        </span>
 
-                            <button class="previous-button">&lt;</button>
 
-                            <button class="previous-button">&gt;</button>
 
+                        <span class="el-t"> / </span>
+
+
+                        <span class="value_status">
+                            <p>72</p>
+                        </span>
+
+                        <span class="status"> Активны </span>
+
+                        <span class="status-double"> 2/12 </span>
+                        <span class="previous-button-togeher">
+                            <button class="previous-button" id="button-left">&lt;</button>
+
+                            <button class="previous-button" id="button-right">&gt;</button>
+                        </span>
+                    </div>
+                    <!-- вторая половина шапки -->
+
+
+
+                    <div class="top-right">
+
+                        <div class="right-st"><input type="reset" id="button-user" value="Поручители">
                         </div>
-                        <!-- вторая половина шапки -->
+
+                        <span class="user-avatar">
+                            <img src="user-icons8.png" alt="пользователь" class="avatar">
+                            <img src="user_1082202.png" alt="пользователь" class="avatar">
+                            <img src="user-icons8.png" alt="пользователь" class="avatar">
+                        </span>
+
+                        <div class="right-st"><button class="status-user" id="status-botton">Статус</button>
+                        </div>
+
+                        <div class="right-st"><button class="clocks" id="button-clock"><img src="clocks_934736.png"
+                                    alt="часы"></button>
+                        </div>
 
 
+                    </div>
 
-                        <div class="top-right">
-
-                            <!-- <img src="user_1082202.png" alt="пользователь"> -->
-                            <div class="right-st"><input type="reset" id="button-user" value="Поручители">
-                            </div>
-
-                            <div class="right-st"><button class="status-user" id="status-botton">Изменить статус</button>
-                            </div>
-
-                            <div class="right-st"><button class="clocks" id="button-clock"><img src="clocks_934736.png"
-                                        alt="часы"></button>
-                            </div>
+                </div>
 
 
+                <!-- нижний блок, центральный/левый -->
+                <div class="button-link">
+
+                    <div class="button-link-container">
+
+                        <div class="link-left">
+                            <a href="https://github.com/barsukovpavell?tab=repositories" target="_blank" class="link-img">
+                                Репозиторий <img src="icon-github-3291667.png" alt="citty">
+                            </a>
+                        </div>
+
+                        <div class="link-right">
+                            <a href="https://www.youtube.com/@VladilenMinin" target="_blank" class="link-img"> Посмотреть
+                                выпуск <img src="free-icon-youtube-2504965.png" alt="youtube"></a>
                         </div>
 
                     </div>
 
-
-                    <!-- правая колонка -->
-                    <div class="left-right">
-                        <div class="colum-centr">
-
-                            <h1>Альбатрос</h1>
-                            <p>Albatross Space </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-
-                        <div class="colum-right">
-                            <h3>Отзывы</h3>
-
-                            <p>Отзывы Клиентов:
+                </div>
+                <div class="left-right">
 
 
-                            </p>
-                        </div>
+                    <div class="colum-centr">
 
+                        <h1>Альбатрос</h1>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+
+                        <span class="background-img-container">
+                            <img src="freepik-export-202412171936195cmW.jpeg" alt="поле, облака"
+                                class="background-img">
+                        </span>
+
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <p>Albatross Space </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
                     </div>
+
+                    <div class="colum-right">
+                        <h3>Отзывы</h3>
+
+                        <p>Отзывы Клиентов:
+
+
+                        </p>
+                    </div>
+
                 </div>
             </div>
 

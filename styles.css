@@ -2,19 +2,23 @@
     font-family: "Pridi", serif;
     font-weight: 300;
     font-style: normal;
+    line-height: 1.333;
   }
 
   body {
     border-top: 1.5px solid rgb(197, 183, 183);
     background-color: rgb(255, 255, 255);
+    width: 100vw;
+
   }
 
   .container {
     display: flex;
     align-items: flex-start;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     padding-top: 0;
+    margin: 0 auto;
   }
 
   /* левая колонка */
@@ -22,7 +26,7 @@
   .colum-left {
     /* background-color: rgb(30, 30, 96); */
     text-align: left;
-    min-height: 100vh;
+    min-height: 100vw;
     border-right: 1.5px solid rgb(197, 183, 183);
     align-items: center;
   }
@@ -116,6 +120,7 @@
     cursor: pointer;
     border-radius: 8px;
     margin-top: 8px;
+    will-change: contents;
   }
 
   /* "tab" вся вкладка обертки, выпадающее меню */
@@ -126,6 +131,7 @@
     /* background-color: aquamarine; */
     flex-direction: column;
     align-items: center;
+    will-change: contents;
 
     z-index: 1;
   }
@@ -137,6 +143,12 @@
     transform: scale(105%);
 
     transition: background-color 0.6s, transform 0.5s;
+  }
+
+  .menu:active{
+    background-color: rgb(194, 172, 215);
+    transform: scale(90%);
+    transition: background-color 0.1s, transform 0.2s;
   }
 
   /* блок выпадающего меню */
@@ -186,6 +198,12 @@
     margin-top: 0;
   }
 
+  .file_label:hover{
+    background-color: rgb(216, 216, 216);
+    transition: background-color 0.5s;
+
+  }
+
   .file_icon img {
     margin-right: 10px;
     width: 20px;
@@ -196,6 +214,10 @@
   .new_file {
     margin: 10px;
     padding: 10px;
+    margin-bottom: 0;
+  }
+  .file_form{
+    
   }
 
   img {
@@ -224,20 +246,19 @@
     padding-top: 3px;
     padding-bottom: 2px;
     border: none;
-  }
-
-  label {
+    will-change: contents;
+    margin-top: 3px;
   }
 
   /* плавное поведение "кнопок" */
-  label:hover {
+  .new_label:hover {
     background-color: rgb(216, 216, 216);
     transition: all 0.5s, color 1s;
-    transform: scale(110%);
-    transition: background-color 1s, transform 0.5s;
+    transform: scale(1.1);
+    transition: background-color 0.5s, transform 0.4s;
   }
 
-  label:active {
+  .new_label:active {
     background-color: rgb(194, 172, 215);
     transform: scale(90%);
     transition: background-color 0.1s, transform 0.2s;
@@ -262,12 +283,6 @@
 
   /* Шапка */
 
-  /* Это нужно? */
-  .top_1 {
-    /* display: flex; */
-    /* background-color: brown; */
-  }
-
   .top {
     /* background-color: blueviolet; */
     width: 100%;
@@ -279,37 +294,31 @@
     display: flex;
     align-items: center;
     border-bottom: 1.5px solid rgb(197, 183, 183);
-    /* padding: 5px 10px; */
+    padding: 20px;
 
     /* что упустил */
     flex-direction: row;
     justify-content: space-between;
     white-space: nowrap;
-    padding: 10px;
-
-    /* gap: 10px; */
-    /* width: 100%;
-    height: 50px;
-    margin: 0; */
-    /* background-color: rgb(30, 103, 80); */
+    /* padding: 10px; */
   }
 
   .top-left {
-    display: flex; /* Позволяет размещать элементы в строку */
-    align-items: center; /* Выравнивает элементы по центру по вертикали */
-    gap: 10px; /* Промежуток между элементами */
-    flex: 1; /* Позволяет элементам занимать доступное пространство */
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    flex: 1; 
     /* background-color: aqua; */
   }
 
   .top-right {
     justify-content: flex-end;
 
-    display: flex; /* Позволяет размещать элементы в строку */
+    display: flex; 
     flex-direction: row;
-    align-items: center; /* Выравнивает элементы по центру по вертикали */
-    gap: 20px; /* Промежуток между элементами */
-    flex: 1; /* Позволяет элементам занимать доступное пространство */
+    align-items: center; 
+    gap: 20px; 
+    flex: 1; 
     /* background-color: aquamarine; */
     margin-right: 30px;
     margin-left: 23px;
@@ -318,11 +327,12 @@
   /* первая кнопка "Назад" */
   .back-button {
     border: 1px solid rgb(197, 183, 183);
-    font-size: 14px;
+    font-size: 16px;
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
+    will-change: contents;
   }
 
   .back-button:hover {
@@ -339,7 +349,6 @@
   }
 
   .themes {
-    
   }
 
   .new_label-themes {
@@ -347,11 +356,38 @@
     align-items: center;
     width: 125px;
     height: 30px;
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 0;
     cursor: pointer;
     padding-top: 3px;
     padding-bottom: 2px;
+    border: none;
+    /* color: rgba(0, 0, 0, 0.54); */
+    filter: opacity(65%);
+
   }
+
+  .new_label-themes:hover{
+    color: black; 
+      filter: none;
+  }
+
+  .new_label-themes:active{
+    transform: scale(0.8);
+    transition: transform 0.2s;
+  }
+
+  .file_icon {
+  }
+
+
+  .file_icon:hover{
+  }
+
+
+
+
+
 
   .right-status input {
     border: none;
@@ -366,8 +402,6 @@
     background-color: rgb(240, 240, 240);
   }
 
-  .file_icon {
-  }
 
   .el-t {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -388,26 +422,48 @@
     color: green;
     height: 15px;
     width: 20px;
-    background-color: rgba(0, 255, 0, 0.096);
+    background-color: rgba(0, 255, 0, 0.196);
     cursor: pointer;
   }
 
   .value_status:hover {
-    background-color: rgba(0, 255, 0, 0.181);
+    background-color: rgba(0, 255, 0, 0.425);
   }
 
   .status {
   }
 
-  .previous-button {
+  .previous-button-togeher {
+    display: block;
+  }
+
+  .previous-button,
+  #button-left,
+  #button-right {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(197, 183, 183);
     border-radius: 5px;
     cursor: pointer;
   }
 
-  .previous-button:hover {
-    background-color: rgb(240, 240, 240);
+  #button-left:hover {
+    background-color: rgb(216, 216, 216);
+  }
+
+  #button-right:hover {
+    background-color: rgb(216, 216, 216);
+  }
+
+  #button-left:active {
+    transform: scale(0.9);
+    background-color: rgb(194, 172, 215);
+
+  }
+
+  #button-right:active {
+    transform: scale(0.9);
+    background-color: rgb(194, 172, 215);
+
   }
 
   .status-double {
@@ -415,8 +471,24 @@
 
   /* правая сторона TOP */
 
+
+  /* Доделать иконки */
+  .user-avatar{
+    display: flex;
+  }
+
+  .user-avatar img{
+  }
+
+  .avatar{
+  }
+
   .right-st {
   }
+  /* End */
+
+
+
 
   .right-st:active {
     transform: scale(0.9);
@@ -424,12 +496,75 @@
 
   .top-right {
   }
-  .right-st {
+
+
+  /* Проверить button-user исходник от "Введите запрос" */
+  #button-user{
+    background: inherit;
+    border: none;
+    font-size: 14px;
+    padding: 8px;
+    cursor: pointer;
+    filter: opacity(65%);
+    /* will-change: contents; */
+    font-size: 18px;
   }
-  .status-user {
+
+  #button-user:hover {
+  filter: none;
   }
-  .clocks {
+
+  #button-user:active {
+    transform: scale(90%);
+    transition:  transform 0.2s;
   }
+
+  #status-botton{
+    border: 1px solid rgb(197, 183, 183);
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    /* will-change: contents; */
+  }
+
+  #status-botton:hover {
+    background-color: rgb(216, 216, 216);
+    transition: all 0.5s, color 1s;
+    /* transform: scale(105%); */
+    transition: background-color 0.5s, transform 0.5s;
+  }
+
+  #status-botton:active {
+    background-color: rgb(194, 172, 215);
+    transform: scale(90%);
+    transition: background-color 0.1s, transform 0.3s;
+  }
+
+  #button-clock{
+    border: 1px solid rgb(197, 183, 183);
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    /* will-change: contents; */
+  }
+
+  #button-clock:hover {
+    background-color: rgb(216, 216, 216);
+    transition: all 0.5s, color 1s;
+    /* transform: scale(105%); */
+    transition: background-color 0.5s, transform 0.5s;
+  }
+
+  #button-clock:active {
+    background-color: rgb(194, 172, 215);
+    transform: scale(90%);
+    transition: background-color 0.1s, transform 0.3s;
+  }
+
 
   .status-user {
     width: 100px;
@@ -457,6 +592,7 @@
   }
   .clocks:hover {
     background-color: rgb(240, 240, 240);
+    /* transform: scale(1.1); */
   }
 
   /* вся правая сторона колонки (элементы) */
@@ -479,16 +615,66 @@
     margin: 0;
     flex: 1;
 
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
   }
+
+
+
+  .background-img-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+  }
+  .background-img {
+  min-width: 100%;
+  height: auto;
+  border-radius: 25px;
+
+  }
+
   .colum-right {
-    /* width: 300px; */
-    min-height: 100vh;
+    width: 200px;
+    height: 100vw;
     /* background-color: rgb(126, 113, 27); */
     margin: 0, 10px;
     border-left: 1.5px solid rgb(197, 183, 183);
     padding: 10px 10px;
+    
+  }
+
+  /* Первые ссылки тела */
+
+
+  .button-link {
+    /* display: flex; */
+  }
+
+  .button-link-container {
+    /* display: flex; */
+    display: inline-flex;
+    margin: 20px;
+  gap: 20px;
+
+  }
+  .link-img{
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+  gap: 5px;
+  }
+
+  .link-img:hover{
+  color: black;
+  }
+
+  .link-left {
+  }
+
+  .link-right {
   }
 
   /* Подвал */
@@ -498,13 +684,15 @@
   }
 
   footer {
-    background-color: rgb(23, 104, 105);
+    background-color: rgba(23, 104, 105, 0.258);
+    border-top: 1.5px solid rgb(197, 183, 183);
+
     width: 100%;
     height: 50px;
     margin: 0;
     padding: 20px;
     text-align: center;
-    color: azure;
+    /* color: azure; */
     position: absolute;
   }
 
@@ -514,21 +702,21 @@
 
   /* Увеличивает кнопки */
   /* #play {
-    margin: 50px;
-    width: 300px;
-    height: 200px;
-    background-color: blueviolet;
-    border-radius: 15px;
-  }
+      margin: 50px;
+      width: 300px;
+      height: 200px;
+      background-color: blueviolet;
+      border-radius: 15px;
+    }
 
-  #play:hover {
-    background-color: rgb(67, 12, 119);
-    transform: scale(105%);
-    transition: background-color 1s, transform 0.5s;
-  }
+    #play:hover {
+      background-color: rgb(67, 12, 119);
+      transform: scale(105%);
+      transition: background-color 1s, transform 0.5s;
+    }
 
-  #play:active {
-    background-color: rgb(194, 172, 215);
-    transform: scale(90%);
-    transition: background-color 0.1s, transform 0.3s;
-  } */
+    #play:active {
+      background-color: rgb(194, 172, 215);
+      transform: scale(90%);
+      transition: background-color 0.1s, transform 0.3s;
+    } */
